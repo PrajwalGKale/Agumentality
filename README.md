@@ -1,7 +1,7 @@
 <h1 align="left">Hi<img src="https://raw.githubusercontent.com/nixin72/nixin72/master/wave.gif" width="60px",height"70">There, I am Prajwal Kale & you're Welcome here !!! </h1>
 <br>
 
-# agumentality [ AR_GYM ]
+# Agumentality [ AR_GYM ]
 
 <h3> What is Ar ?</h3><br>
 Augmented reality (AR for short) is defined as "the real-time use of information in the form of text, graphics, audio, or other virtual enhancements integrated with real-world objects." This generally means that digital imagery, or data, is rendered onto real-world objects like actual physical things or, at times, integrated into more traditional media like live video streams or heads-up displays, or special augmented reality glasses.
