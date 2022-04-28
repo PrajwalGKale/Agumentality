@@ -10,10 +10,10 @@ Augmented reality (AR for short) is defined as "the real-time use of information
 <h2><u>Geometrical Shapes Module 🔴</u></h2><br>
 In this module, user has the freedom to choose whichever shape he want to render from given 3 types of shape(i.e. sphere, cube, cylinder). Due to plugin of AR Core library which support on Android we can only render up to 3 shapes only. After choosing the shape user can also select radius and according to his need. Either he can choose color or he can choose from different gradient of colors and also In this particular module user has the flexibility to use various images and pattern of his choice and that images and pattern will then get rendered his chosen desire Shapes on his smartphone at realtime. All the custom things selected by the user will get virtually  rendered onto his smartphone.
 <br>
+<img src="https://github.com/PrajwalGKale/Agumentality/blob/master/assets/geometry.png" alt="GeoMetric" width="500" height="500">
 
-<h2><u>Furniture Module🪑</u></h2><br>In this module, we are goanna use catalog of different furniture and select the furniture we want to see rendered and that particular furniture will be virtually rendered in users smartphone at realtime. By this particular feature he can virtually spot the location where he needs to place that furniture. We have also included one useful feature and that feature will redirect user to email app as he clicks on the button option given to him. In that email reception section is auto-filled by official company’s e-mail ID and  subject of e-mail also auto-filled and body will consist of the photo of furniture liked by the user, he can then send mail to that company and get that desire furniture delivered at his door steps.
-
-
+<h2><u>Furniture Module🪑</u></h2><br>In this module, we are goanna use catalog of different furniture and select the furniture we want to see rendered and that particular furniture will be virtually rendered in users smartphone at realtime. By this particular feature he can virtually spot the location where he needs to place that furniture. We have also included one useful feature and that feature will redirect user to email app as he clicks on the button option given to him. In that email reception section is auto-filled by official company’s e-mail ID and  subject of e-mail also auto-filled and body will consist of the photo of furniture liked by the user, he can then send mail to that company and get that desire furniture delivered at his door steps.<br>
+<img src="https://github.com/PrajwalGKale/Agumentality/blob/master/assets/ChairOne.png" alt="GeoMetric" width="300" height="300">
 
 ## Getting Started
 
