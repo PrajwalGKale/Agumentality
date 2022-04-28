@@ -2,6 +2,7 @@ import 'package:agumentality/Experiment.dart';
 import 'package:agumentality/FurnitureMod/FurnitureModule.dart';
 import 'package:agumentality/GeoMetricShapes/GeometricShapes.dart';
 import 'package:agumentality/HomePage.dart';
+import 'package:agumentality/OnBoarding.dart';
 import 'package:agumentality/Utils/ComingSoon.dart';
 import 'package:flutter/material.dart';
 import 'Earth.dart';
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      home: OnBoarding(),
       routes: {
         GeometricShapes.routename: (ctx) => GeometricShapes(),
         Earth.routename: (ctx) => Earth(),

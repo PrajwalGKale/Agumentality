@@ -84,7 +84,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
     });
     controllerlogo.addListener(() {
       setState(() {
-        print(controllerlogo.value);
+        //print(controllerlogo.value);
       });
     });
   }

@@ -31,6 +31,14 @@ List<HomepageData> HomeDatalst = [
       margintop: 1.0,
       marginright: 130.0),
   HomepageData(
+      name: "Furniture",
+      image: "assets/ChairOne.png",
+      path: FurnitureMod.routename,
+      width: 160.0,
+      height: 160.0,
+      margintop: 40.0,
+      marginright: 140.0),
+  HomepageData(
       name: "Marvel",
       image: "assets/marvel2.png",
       path: ComingSoon.routename,
@@ -38,12 +46,4 @@ List<HomepageData> HomeDatalst = [
       height: 270,
       margintop: 1.0,
       marginright: 100.0),
-  HomepageData(
-      name: "Furniture",
-      image: "assets/ChairOne.png",
-      path: FurnitureMod.routename,
-      width: 160.0,
-      height: 160.0,
-      margintop: 40.0,
-      marginright: 140.0)
 ];

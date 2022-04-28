@@ -57,6 +57,7 @@ dependencies:
   share_plus: ^4.0.4
   flutter_mailer: any
   url_launcher: ^6.0.20
+  sk_onboarding_screen: ^1.0.1
 
 
 dev_dependencies:
