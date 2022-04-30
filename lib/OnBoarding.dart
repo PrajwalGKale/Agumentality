@@ -16,20 +16,21 @@ class _OnBoardingState extends State<OnBoarding> {
     SkOnboardingModel(
         title: 'GeoMetric Shape',
         description:
-            'Easily find your grocery items and you will get delivery in wide range',
+            'In this module, user can choose shape like cube,cylinder,sphere and it\'s customizable.',
         titleColor: Colors.black,
         descripColor: const Color(0xFF929794),
         imagePath: HomeDatalst[0].image),
     SkOnboardingModel(
         title: 'Furniture',
         description:
-            'We make ordering fast, simple and free-no matter if you order online or cash',
+            'In this module,user can choose there desire furniture and order by mailing to company.',
         titleColor: Colors.black,
         descripColor: const Color(0xFF929794),
         imagePath: HomeDatalst[1].image),
     SkOnboardingModel(
         title: 'Marvel',
-        description: 'Pay for order using credit or debit card',
+        description:
+            'In this modules,user can render there favourite Marvel character.',
         titleColor: Colors.black,
         descripColor: const Color(0xFF929794),
         imagePath: HomeDatalst[2].image),
