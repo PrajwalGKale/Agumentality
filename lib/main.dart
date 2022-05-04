@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: ARcoreFaceview(),
+      home: GeometricShapes(),
       routes: {
         GeometricShapes.routename: (ctx) => GeometricShapes(),
         Earth.routename: (ctx) => Earth(),

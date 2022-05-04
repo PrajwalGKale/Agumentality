@@ -1,6 +1,7 @@
 import 'dart:io';
 import 'package:agumentality/GeoMetricShapes/GeoMetricColor.dart';
 import 'package:agumentality/GeoMetricShapes/GeoMetricCreatedImage.dart';
+import 'package:agumentality/GeoMetricShapes/GeometicPattern.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'dart:async';
@@ -877,11 +878,12 @@ class _GeometricShapesState extends State<GeometricShapes>
                                                   dragsize: _dragsize,
                                                   SavedImage: savedImage,
                                                 )
-                                              : GeoMetricColor(
+                                              : GeometricPattern(
                                                   Shape: Shape,
-                                                  color: pickerColor,
                                                   dragRadius: _dragRadius,
-                                                  dragSize: _dragsize);
+                                                  dragsize: _dragsize,
+                                                  SavedImage: selectedpattern,
+                                                );
                                         }),
                                       );
                                     },

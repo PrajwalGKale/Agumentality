@@ -14,15 +14,16 @@ class _ARcoreFaceviewState extends State<ARcoreFaceview> {
   late ArCoreFaceController arCoreFaceController;
   void Arcoreviewcreated(ArCoreFaceController controller) {
     arCoreFaceController = controller;
+
     loadMesh();
   }
 
   void loadMesh() async {
     final ByteData texturebytes =
-        await rootBundle.load("assets/fox_face_mesh_texture.png");
+        await rootBundle.load("assets/loin22-removebg-preview.png");
     arCoreFaceController.loadMesh(
         textureBytes: texturebytes.buffer.asUint8List(),
-        skin3DModelFilename: "fox_face.sfb");
+        skin3DModelFilename: "man_face.sfb");
   }
 
   @override
@@ -38,6 +39,7 @@ class _ARcoreFaceviewState extends State<ARcoreFaceview> {
       body: ArCoreFaceView(
         onArCoreViewCreated: Arcoreviewcreated,
         enableAugmentedFaces: true,
+        //debug: true,
       ),
     );
   }
