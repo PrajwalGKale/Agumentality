@@ -13,39 +13,27 @@ class _MarvelRenderState extends State<MarvelRender> {
   List<CardItem> items = [
     IconTitleCardItem(
       text: "Alarm",
-      iconData: Icons.access_alarms,
     ),
-    IconTitleCardItem(
-      text: "Add",
-      iconData: Icons.add,
-    ),
-    IconTitleCardItem(
-      text: "Call",
-      iconData: Icons.add_call,
-    ),
-    IconTitleCardItem(
-      text: "WiFi",
-      iconData: Icons.wifi,
-    ),
-    IconTitleCardItem(
-      text: "File",
-      iconData: Icons.attach_file,
-    ),
-    IconTitleCardItem(
-      text: "Air Play",
-      iconData: Icons.airplay,
-    ),
+    IconTitleCardItem(text: "Add", image: "assets/spiderman.png"),
+    IconTitleCardItem(text: "Call", image: "assets/spiderman.png"),
+    IconTitleCardItem(text: "WiFi", image: "assets/spiderman.png"),
+    IconTitleCardItem(text: "File", image: "assets/spiderman.png"),
+    IconTitleCardItem(text: "Air Play", image: "assets/spiderman.png"),
   ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white60,
-      body: Center(
-        child: HorizontalCardPager(
-          onPageChanged: (page) => print("page : $page"),
-          onSelectedItem: (page) => print("selected : $page"),
-          items: items,
-        ),
+      body: Column(
+        children: [
+          Center(
+            child: HorizontalCardPager(
+              onPageChanged: (page) => print("page : $page"),
+              onSelectedItem: (page) => print("selected : $page"),
+              items: items,
+            ),
+          ),
+        ],
       ),
     );
   }
