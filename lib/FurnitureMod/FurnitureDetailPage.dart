@@ -116,7 +116,13 @@ class FurnitureDetailPage extends StatelessWidget {
                     const SizedBox(
                       width: 30,
                     ),
-                    Text(funitureDatalst[index].price),
+                    Text(
+                      funitureDatalst[index].price,
+                      style: GoogleFonts.poppins(
+                          fontSize: 24,
+                          fontWeight: FontWeight.w300,
+                          color: Colors.white60),
+                    ),
                   ],
                 ),
                 const SizedBox(
@@ -125,7 +131,13 @@ class FurnitureDetailPage extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: <Widget>[
-                    Text('Rating :'),
+                    Text(
+                      'Rating :',
+                      style: GoogleFonts.poppins(
+                          fontSize: 20,
+                          fontWeight: FontWeight.w400,
+                          color: Colors.white60),
+                    ),
                     for (int i = 0; i < funitureDatalst[index].star; i++)
                       const FaIcon(
                         FontAwesomeIcons.solidStar,
@@ -134,7 +146,7 @@ class FurnitureDetailPage extends StatelessWidget {
                   ],
                 ),
                 const SizedBox(
-                  height: 25,
+                  height: 16,
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),

@@ -13,6 +13,7 @@ import 'package:vector_math/vector_math_64.dart' as vector;
 import 'package:flutter_mailer/flutter_mailer.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'FunitureData.dart';
+import 'package:flutter_xlider/flutter_xlider.dart';
 
 class FurnitureRenderMod extends StatefulWidget {
   final int index;
@@ -25,7 +26,8 @@ class FurnitureRenderMod extends StatefulWidget {
 
 class _FurnitureRenderModState extends State<FurnitureRenderMod> {
   late ArCoreController arCoreController;
-
+  int _width = 500;
+  int _height = 500;
   @override
   void dispose() {
     // TODO: implement dispose
@@ -51,8 +53,8 @@ class _FurnitureRenderModState extends State<FurnitureRenderMod> {
     final characterpos = ArCoreNode(
       image: ArCoreImage(
         bytes: bytes,
-        width: widget.index > 5 ? 900 : 500,
-        height: 600,
+        width: widget.index > 5 ? 100 : 700,
+        height: 800,
       ),
       position: hit.pose.translation + vector.Vector3(0.0, 0.0, 0.0),
       rotation: hit.pose.rotation + vector.Vector4(0.0, 0.0, 0.0, 0.0),
@@ -82,6 +84,22 @@ class _FurnitureRenderModState extends State<FurnitureRenderMod> {
               ),
             ),
           ),
+          // Positioned(
+          //   top: 80,
+          //   left: 10,
+          //   child: FittedBox(
+          //     child: FlutterSlider(
+          //       values: [300],
+          //       max: 500,
+          //       min: 0,
+          //       onDragging: (handlerIndex, lowerValue, upperValue) {
+          //         _height = lowerValue;
+          //         _width = upperValue;
+          //         setState(() {});
+          //       },
+          //     ),
+          //   ),
+          // ),
           Positioned(
             top: 50,
             right: 10,

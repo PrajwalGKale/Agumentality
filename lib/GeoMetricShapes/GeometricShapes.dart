@@ -16,7 +16,7 @@ import 'package:vector_math/vector_math_64.dart' as vector;
 import 'package:buttons_tabbar/buttons_tabbar.dart';
 import 'package:wave_slider/wave_slider.dart';
 import 'package:custom_cupertino_picker/custom_cupertino_picker.dart';
-import 'package:keyboard_dismisser/keyboard_dismisser.dart';
+//import 'package:keyboard_dismisser/keyboard_dismisser.dart';
 import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:path/path.dart' as path;
 import 'package:path_provider/path_provider.dart' as syspath;
@@ -37,7 +37,7 @@ class GeometricShapes extends StatefulWidget {
 }
 
 class _GeometricShapesState extends State<GeometricShapes>
-    with TickerProviderStateMixin {
+    with TickerProviderStateMixin, WidgetsBindingObserver {
   late ArCoreController _arCoreController;
   var isClick = false;
   final _Fromkey = GlobalKey<FormState>();
@@ -92,6 +92,7 @@ class _GeometricShapesState extends State<GeometricShapes>
   @override
   void initState() {
     super.initState();
+
     _Hexcontroller.addListener(() {
       setState(() {});
     });

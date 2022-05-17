@@ -27,7 +27,8 @@ class _GeometricPatternState extends State<GeometricPattern> {
   late ArCoreController _controller;
 
   Future _addSphere(ArCoreController controller) async {
-    final ByteData texturebytes = await rootBundle.load("assets/Gradienta.jpg");
+    final ByteData texturebytes =
+        await rootBundle.load("assets/DenseForest.jpg");
 
     final materials = ArCoreMaterial(
       color: Colors.amber,
