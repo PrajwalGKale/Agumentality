@@ -1,58 +1,57 @@
 import 'package:flutter/material.dart';
 
-class ICard extends StatefulWidget {
-  const ICard({Key? key}) : super(key: key);
-
-  @override
-  State<ICard> createState() => _ICardState();
-}
-
-class _ICardState extends State<ICard> {
-  bool isHover = false;
-  Offset mousepos = const Offset(0, 0);
-
-  backImage() {
-    return AnimatedPositioned(
-      curve: Curves.easeOutCubic,
-      top: isHover ? -40 : 0,
-      left: isHover ? -100 : -100,
-      duration: const Duration(milliseconds: 1000),
-      height: isHover ? 600 : 450,
-      width: 500,
-      child: Container(
-        height: 600,
-        width: 500,
-        decoration: const BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage("assets/MarvelMotionPoster.jpeg"),
-            fit: BoxFit.fitHeight,
-          ),
-        ),
+Row buildCard(
+    {required int length, required int index, required int ontapindex}) {
+  return Row(
+    children: [
+      SizedBox(
+        width: 10,
       ),
-    );
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return AbsorbPointer(
-      absorbing: true,
-      child: InkWell(
-        onLongPress: () {
-          print('hover');
-          setState(() {
-            isHover = true;
-          });
-        },
+      Expanded(
         child: Container(
-          height: 450,
-          width: 280,
-          child: Stack(
-            children: [
-              backImage(),
-            ],
-          ),
+          width: 100,
+          height: 100,
+          //color: Colors.red,
+          child: ontapindex == index
+              ? Container(
+                  decoration: BoxDecoration(
+                    border: Border.all(color: Colors.red.shade200, width: 4),
+                    borderRadius: BorderRadius.circular(60.0),
+                  ),
+                  child: Container(
+                    height: 50,
+                    width: 50,
+                    decoration: BoxDecoration(
+                      color: Colors.red.shade100,
+                      border: Border.all(color: Colors.red.shade400, width: 2),
+                      borderRadius: BorderRadius.circular(60.0),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Image.asset("assets/MarvelLogo/AVG${index}.png",
+                          fit: BoxFit.contain),
+                    ),
+                  ),
+                )
+              : Container(
+                  height: 50,
+                  width: 50,
+                  decoration: BoxDecoration(
+                    color: Colors.red.shade100,
+                    border: Border.all(color: Colors.red.shade400, width: 2),
+                    borderRadius: BorderRadius.circular(60.0),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Image.asset("assets/MarvelLogo/AVG${index}.png",
+                        fit: BoxFit.contain),
+                  ),
+                ),
         ),
       ),
-    );
-  }
+      SizedBox(
+        width: 10,
+      ),
+    ],
+  );
 }

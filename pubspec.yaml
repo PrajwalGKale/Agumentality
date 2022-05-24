@@ -59,7 +59,6 @@ dependencies:
   url_launcher: ^6.0.20
   sk_onboarding_screen: ^1.0.1
   flutter_xlider: ^3.4.0
-  horizontal_card_pager: ^1.1.1
 
 
 dev_dependencies:
@@ -88,6 +87,8 @@ flutter:
   assets:
      - assets/
      - assets/Furniture/
+     - assets/MarvelLogo/
+     - assets/Marvel/
 
 
 

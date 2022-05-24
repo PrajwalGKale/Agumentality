@@ -84,7 +84,7 @@ class _MarvelState extends State<Marvel>
           decoration: BoxDecoration(
               gradient: LinearGradient(
                   begin: begin, end: end, colors: [bottomColor, topColor])),
-          child: Center(child: ICard()),
+          child: Center(child: Text("data")),
         ),
       ),
     );
