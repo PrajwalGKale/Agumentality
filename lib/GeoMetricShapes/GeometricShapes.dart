@@ -779,6 +779,10 @@ class _GeometricShapesState extends State<GeometricShapes>
                                           selectedpattern = value as String;
                                           indexpat = patternList
                                               .indexOf(selectedpattern);
+
+                                          print(
+                                              "--==========\n${indexpat.runtimeType}");
+                                          print(indexpat);
                                         });
                                       },
                                       icon: const Icon(
@@ -885,7 +889,7 @@ class _GeometricShapesState extends State<GeometricShapes>
                                                   Shape: Shape,
                                                   dragRadius: _dragRadius,
                                                   dragsize: _dragsize,
-                                                  pattern: indexpat,
+                                                  pattern: indexpat + 1,
                                                 );
                                         }),
                                       );

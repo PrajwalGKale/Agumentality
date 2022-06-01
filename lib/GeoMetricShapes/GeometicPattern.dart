@@ -10,7 +10,7 @@ import 'package:vector_math/vector_math_64.dart' as vector;
 class GeometricPattern extends StatefulWidget {
   //const GeometricPattern({Key? key}) : super(key: key);
   final String Shape;
-  late String pattern;
+  late int pattern;
   double dragsize;
   double dragRadius;
   GeometricPattern(
@@ -28,7 +28,7 @@ class _GeometricPatternState extends State<GeometricPattern> {
 
   Future _addSphere(ArCoreController controller) async {
     final ByteData texturebytes =
-        await rootBundle.load("assets/DenseForest.jpg");
+        await rootBundle.load("assets/Pattern/Pattern${widget.pattern}.jpg");
 
     final materials = ArCoreMaterial(
       color: Colors.amber,
@@ -50,7 +50,7 @@ class _GeometricPatternState extends State<GeometricPattern> {
 
   Future _addCylinder(ArCoreController controller) async {
     final ByteData texturebytes =
-        await rootBundle.load("assets/Pattern/${widget.pattern}" + ".jpg");
+        await rootBundle.load("assets/Pattern/Pattern${widget.pattern}.jpg");
 
     final materials = ArCoreMaterial(
       //metallic: 0.1,
@@ -76,13 +76,13 @@ class _GeometricPatternState extends State<GeometricPattern> {
 
   Future _addCube(ArCoreController controller) async {
     final ByteData texturebytes =
-        await rootBundle.load("assets/Pattern/${widget.pattern}" + ".jpg");
+        await rootBundle.load("assets/Pattern/Pattern${widget.pattern}.jpg");
 
     final materials = ArCoreMaterial(
       metallic: 0.1,
       reflectance: 0.1,
       roughness: 0.1,
-      color: Colors.amber,
+      //color: Colors.amber,
       textureBytes: texturebytes.buffer.asUint8List(),
     );
 
@@ -115,10 +115,10 @@ class _GeometricPatternState extends State<GeometricPattern> {
   @override
   Widget build(BuildContext context) {
     // print("assets/Pattern/${widget.SavedImage}+.jpg");
-    print("-------");
-    print("-------:):)");
-    print(itemsvalue[items.indexOf(widget.pattern)].toString());
-    print("-------:):)");
+    // print("-------");
+    // print("-------:):)");
+    // print(itemsvalue[items.indexOf(widget.pattern)].toString());
+    // print("-------:):)");
     return Scaffold(
       body: Stack(
         children: <Widget>[

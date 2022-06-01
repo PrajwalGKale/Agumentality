@@ -26,8 +26,8 @@ class FurnitureRenderMod extends StatefulWidget {
 
 class _FurnitureRenderModState extends State<FurnitureRenderMod> {
   late ArCoreController arCoreController;
-  int _width = 500;
-  int _height = 500;
+  var posheight = 800;
+  var poswidth = 800;
   @override
   void dispose() {
     // TODO: implement dispose
@@ -53,8 +53,8 @@ class _FurnitureRenderModState extends State<FurnitureRenderMod> {
     final characterpos = ArCoreNode(
       image: ArCoreImage(
         bytes: bytes,
-        width: widget.index > 5 ? 100 : 700,
-        height: 800,
+        width: poswidth,
+        height: widget.index > 5 ? 900 : posheight,
       ),
       position: hit.pose.translation + vector.Vector3(0.0, 0.0, 0.0),
       rotation: hit.pose.rotation + vector.Vector4(0.0, 0.0, 0.0, 0.0),
@@ -71,6 +71,53 @@ class _FurnitureRenderModState extends State<FurnitureRenderMod> {
           ArCoreView(
             onArCoreViewCreated: ArCoreViewCreated,
             enableTapRecognizer: true,
+          ),
+          Positioned(
+            top: 130,
+            right: 10,
+            child: Column(
+              children: [
+                IconButton(
+                  onPressed: () {
+                    print("plus");
+                    setState(() {
+                      posheight = posheight + 100;
+                      poswidth = poswidth + 80;
+                    });
+                    print("----------\n-------");
+                    print(poswidth);
+                    print(posheight);
+                    print("----------\n-------");
+                  },
+                  icon: const FaIcon(
+                    FontAwesomeIcons.plusCircle,
+                    color: Color(0xff645087),
+                    size: 30,
+                  ),
+                ),
+                const SizedBox(
+                  height: 5,
+                ),
+                IconButton(
+                  onPressed: () {
+                    print("plus");
+                    setState(() {
+                      posheight = posheight - 100;
+                      poswidth = poswidth - 80;
+                    });
+                    print("----------\n-------");
+                    print(poswidth);
+                    print(posheight);
+                    print("----------\n-------");
+                  },
+                  icon: const FaIcon(
+                    FontAwesomeIcons.minusCircle,
+                    color: Color(0xff645087),
+                    size: 30,
+                  ),
+                ),
+              ],
+            ),
           ),
           Positioned(
             top: 50,

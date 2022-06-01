@@ -19,13 +19,13 @@ class _MarvelRenderState extends State<MarvelRender> {
   var posheight = 700;
   var poswidth = 700;
   int length = 13;
-
+  var characterPos;
   Future addMarvelCharacter(ArCoreHitTestResult hit) async {
     final bytes = (await rootBundle.load("assets/Marvel/AVG${ontapindex}.png"))
         .buffer
         .asUint8List();
 
-    final characterPos = ArCoreNode(
+    characterPos = ArCoreNode(
       image: ArCoreImage(bytes: bytes, width: poswidth, height: posheight),
       position: hit.pose.translation + vector.Vector3(0.0, 0.0, 0.0),
       rotation: hit.pose.rotation + vector.Vector4(0.0, 0.0, 0.0, 0.0),
@@ -97,6 +97,7 @@ class _MarvelRenderState extends State<MarvelRender> {
                   onPressed: () {
                     print("plus");
                     setState(() {
+                      arCoreController.removeNode(nodeName: characterPos);
                       posheight = posheight + 100;
                       poswidth = poswidth + 80;
                     });
