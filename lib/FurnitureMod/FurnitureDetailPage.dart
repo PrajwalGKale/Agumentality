@@ -149,12 +149,12 @@ class FurnitureDetailPage extends StatelessWidget {
                   height: 16,
                 ),
                 Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.all(15.0),
                   child: Scrollbar(
                     child: Expanded(
                       child: Container(
                         decoration: const BoxDecoration(
-                          color: Colors.black38,
+                          color: Colors.black12,
                           borderRadius: BorderRadius.all(
                             Radius.circular(20),
                           ),

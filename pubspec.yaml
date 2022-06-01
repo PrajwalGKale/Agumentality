@@ -59,6 +59,7 @@ dependencies:
   url_launcher: ^6.0.20
   sk_onboarding_screen: ^1.0.1
   flutter_xlider: ^3.4.0
+  hover_effect: ^0.6.0
 
 
 dev_dependencies:

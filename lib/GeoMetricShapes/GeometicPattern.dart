@@ -10,11 +10,11 @@ import 'package:vector_math/vector_math_64.dart' as vector;
 class GeometricPattern extends StatefulWidget {
   //const GeometricPattern({Key? key}) : super(key: key);
   final String Shape;
-  late String SavedImage;
+  late String pattern;
   double dragsize;
   double dragRadius;
   GeometricPattern(
-      {required this.SavedImage,
+      {required this.pattern,
       required this.Shape,
       this.dragsize = 0.0,
       this.dragRadius = 0.0});
@@ -50,7 +50,7 @@ class _GeometricPatternState extends State<GeometricPattern> {
 
   Future _addCylinder(ArCoreController controller) async {
     final ByteData texturebytes =
-        await rootBundle.load("assets/Pattern/${widget.SavedImage}" + ".jpg");
+        await rootBundle.load("assets/Pattern/${widget.pattern}" + ".jpg");
 
     final materials = ArCoreMaterial(
       //metallic: 0.1,
@@ -76,7 +76,7 @@ class _GeometricPatternState extends State<GeometricPattern> {
 
   Future _addCube(ArCoreController controller) async {
     final ByteData texturebytes =
-        await rootBundle.load("assets/Pattern/${widget.SavedImage}" + ".jpg");
+        await rootBundle.load("assets/Pattern/${widget.pattern}" + ".jpg");
 
     final materials = ArCoreMaterial(
       metallic: 0.1,
@@ -117,7 +117,7 @@ class _GeometricPatternState extends State<GeometricPattern> {
     // print("assets/Pattern/${widget.SavedImage}+.jpg");
     print("-------");
     print("-------:):)");
-    print(itemsvalue[items.indexOf(widget.SavedImage)].toString());
+    print(itemsvalue[items.indexOf(widget.pattern)].toString());
     print("-------:):)");
     return Scaffold(
       body: Stack(

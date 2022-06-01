@@ -13,22 +13,19 @@ import 'OnTap.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: MarvelRender(),
+      home: OnBoarding(),
       routes: {
         GeometricShapes.routename: (ctx) => GeometricShapes(),
         Earth.routename: (ctx) => Earth(),
-        ComingSoon.routename: (ctx) => ComingSoon(),
+        Marvel.routename: (ctx) => Marvel(),
         FurnitureMod.routename: (ctx) => FurnitureMod(),
         Experiment.routename: (ctx) => Experiment(),
         OnTap.routename: (ctx) => OnTap(),

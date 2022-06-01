@@ -1,15 +1,18 @@
-import 'package:agumentality/Marvel/ICard.dart';
+import 'package:agumentality/Marvel/MarvelRender.dart';
 import 'package:flutter/material.dart';
+import 'package:hover_effect/hover_effect.dart';
 
 class Marvel extends StatefulWidget {
   const Marvel({Key? key}) : super(key: key);
-
+  static const routename = '/MarvelDCEU';
   @override
   State<Marvel> createState() => _MarvelState();
 }
 
 class _MarvelState extends State<Marvel>
     with TickerProviderStateMixin, WidgetsBindingObserver {
+  var hover1 = false;
+  var hover2 = false;
   //Animation Var//
   List<Color> colorList = [
     const Color(0xff3022AC),
@@ -84,7 +87,75 @@ class _MarvelState extends State<Marvel>
           decoration: BoxDecoration(
               gradient: LinearGradient(
                   begin: begin, end: end, colors: [bottomColor, topColor])),
-          child: Center(child: Text("data")),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Center(
+                child: Container(
+                  margin: const EdgeInsets.only(top: 30),
+                  height: 260,
+                  width: 260,
+                  child: HoverCard(
+                    builder: (context, hovering) {
+                      return Center(
+                          child: Container(
+                        //height: 600,
+                        width: 300,
+                        decoration: BoxDecoration(
+                          image: DecorationImage(
+                              image: const AssetImage(
+                                  "assets/MarvelMotionPoster.jpeg"),
+                              fit: hover1 ? BoxFit.cover : BoxFit.fill),
+                        ),
+                      ));
+                    },
+                    depth: 9,
+                    depthColor: const Color(0xff8E6DC7),
+                    onTap: () {
+                      setState(() {
+                        hover1 = !hover1;
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => MarvelRender()),
+                        );
+                      });
+                    },
+                  ),
+                ),
+              ),
+              Center(
+                child: Container(
+                  margin: const EdgeInsets.only(top: 30),
+                  height: 260,
+                  width: 260,
+                  child: HoverCard(
+                    builder: (context, hovering) {
+                      return Center(
+                          child: Container(
+                        //height: 600,
+                        width: 300,
+                        decoration: BoxDecoration(
+                          image: DecorationImage(
+                              image: const AssetImage(
+                                  "assets/DCMotionPoster.jpeg"),
+                              fit: hover2 ? BoxFit.cover : BoxFit.fill),
+                        ),
+                      ));
+                    },
+                    depth: 9,
+                    depthColor: Color(0xff8E6DC7),
+                    onTap: () {
+                      setState(() {
+                        hover2 = !hover2;
+                      });
+                    },
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

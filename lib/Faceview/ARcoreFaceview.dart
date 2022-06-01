@@ -20,7 +20,7 @@ class _ARcoreFaceviewState extends State<ARcoreFaceview> {
 
   void loadMesh() async {
     final ByteData texturebytes =
-        await rootBundle.load("assets/loin22-removebg-preview.png");
+        await rootBundle.load("assets/sunglasses2.png");
     arCoreFaceController.loadMesh(
         textureBytes: texturebytes.buffer.asUint8List(),
         skin3DModelFilename: "man_face.sfb");

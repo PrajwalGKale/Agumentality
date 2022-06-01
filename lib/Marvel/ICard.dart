@@ -15,15 +15,15 @@ Row buildCard(
           child: ontapindex == index
               ? Container(
                   decoration: BoxDecoration(
-                    border: Border.all(color: Colors.red.shade200, width: 4),
+                    border: Border.all(color: Color(0xff7504CD), width: 3),
                     borderRadius: BorderRadius.circular(60.0),
                   ),
                   child: Container(
-                    height: 50,
-                    width: 50,
+                    height: 60,
+                    width: 60,
                     decoration: BoxDecoration(
-                      color: Colors.red.shade100,
-                      border: Border.all(color: Colors.red.shade400, width: 2),
+                      color: Color(0xffD9C3FF),
+                      border: Border.all(color: Color(0xff330163), width: 3),
                       borderRadius: BorderRadius.circular(60.0),
                     ),
                     child: Padding(
@@ -34,11 +34,11 @@ Row buildCard(
                   ),
                 )
               : Container(
-                  height: 50,
-                  width: 50,
+                  height: 60,
+                  width: 60,
                   decoration: BoxDecoration(
-                    color: Colors.red.shade100,
-                    border: Border.all(color: Colors.red.shade400, width: 2),
+                    color: Color(0xffD9C3FF),
+                    border: Border.all(color: Color(0xff330163), width: 2),
                     borderRadius: BorderRadius.circular(60.0),
                   ),
                   child: Padding(

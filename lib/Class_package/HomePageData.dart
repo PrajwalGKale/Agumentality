@@ -1,5 +1,6 @@
 import 'package:agumentality/FurnitureMod/FurnitureModule.dart';
 import 'package:agumentality/GeoMetricShapes/GeometricShapes.dart';
+import 'package:agumentality/Marvel/Marvel.dart';
 import 'package:agumentality/MarvelChar.dart';
 import 'package:agumentality/Utils/ComingSoon.dart';
 
@@ -41,7 +42,7 @@ List<HomepageData> HomeDatalst = [
   HomepageData(
       name: "Marvel",
       image: "assets/marvel2.png",
-      path: ComingSoon.routename,
+      path: Marvel.routename,
       width: 270,
       height: 270,
       margintop: 1.0,

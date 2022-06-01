@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 import 'dart:async';
 import 'dart:typed_data';
 import 'package:agumentality/Class_package/Enum.dart';
-import 'package:agumentality/Utils/ColorList.dart';
+import 'package:agumentality/Utils/PatternLst.dart';
 import 'package:arcore_flutter_plugin/arcore_flutter_plugin.dart';
 import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -62,6 +62,7 @@ class _GeometricShapesState extends State<GeometricShapes>
   Color _color = Colors.blue;
   var SelectedIndex = 0;
   var selectedpattern;
+  var indexpat;
   late bool flag = false;
   var selectedValue;
   Color pickerColor = Color(0xff443a49);
@@ -776,7 +777,8 @@ class _GeometricShapesState extends State<GeometricShapes>
                                       onChanged: (value) {
                                         setState(() {
                                           selectedpattern = value as String;
-                                          print(selectedpattern);
+                                          indexpat = patternList
+                                              .indexOf(selectedpattern);
                                         });
                                       },
                                       icon: const Icon(
@@ -883,7 +885,7 @@ class _GeometricShapesState extends State<GeometricShapes>
                                                   Shape: Shape,
                                                   dragRadius: _dragRadius,
                                                   dragsize: _dragsize,
-                                                  SavedImage: selectedpattern,
+                                                  pattern: indexpat,
                                                 );
                                         }),
                                       );

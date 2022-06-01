@@ -1,0 +1,21 @@
+List<String> patternList = [
+  "BiaAndre",
+  "BirMinGham",
+  "BlueCamo",
+  "DenseForest",
+  "Dust",
+  "FloresArt",
+  "Gradienta",
+  "GradientGeo",
+  "GreenCamo",
+  "Pawel",
+  "prova_texture",
+  "RedCamo",
+  "Ridley",
+  "Sean",
+  "SocialCut",
+  "SocialCut",
+  "WhiteCamo",
+  "WhiteGeo",
+  "YellowCamo"
+];

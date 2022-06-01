@@ -1,8 +1,10 @@
+import 'package:agumentality/Class_package/AVGlst.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:agumentality/Marvel/ICard.dart';
 import 'package:arcore_flutter_plugin/arcore_flutter_plugin.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:vector_math/vector_math_64.dart' as vector;
 
 class MarvelRender extends StatefulWidget {
@@ -12,9 +14,11 @@ class MarvelRender extends StatefulWidget {
 
 class _MarvelRenderState extends State<MarvelRender> {
   late ArCoreController arCoreController;
+  List avengerlst = [];
   var ontapindex = 0;
   var posheight = 700;
   var poswidth = 700;
+  int length = 13;
 
   Future addMarvelCharacter(ArCoreHitTestResult hit) async {
     final bytes = (await rootBundle.load("assets/Marvel/AVG${ontapindex}.png"))
@@ -33,6 +37,8 @@ class _MarvelRenderState extends State<MarvelRender> {
     final hit = hits.first;
     //adding the char
     addMarvelCharacter(hit);
+
+    //
   }
 
   void whenArCoreViewCreated(ArCoreController controller) {
@@ -49,6 +55,7 @@ class _MarvelRenderState extends State<MarvelRender> {
 
   @override
   Widget build(BuildContext context) {
+    print("------------->${avengerlst.length}");
     return Scaffold(
       backgroundColor: Colors.white60,
       body: Stack(
@@ -57,28 +64,28 @@ class _MarvelRenderState extends State<MarvelRender> {
             onArCoreViewCreated: whenArCoreViewCreated,
             enableTapRecognizer: true,
           ),
-          Positioned(
-            top: 600,
-            child: Container(
-              height: 90,
-              child: ListView.builder(
-                scrollDirection: Axis.horizontal,
-                itemExtent: 100.0,
-                shrinkWrap: true,
-                itemCount: 4,
-                itemBuilder: (BuildContext context, int index) {
-                  return GestureDetector(
-                    onTap: () {
-                      setState(() {
-                        ontapindex = index;
-                      });
-                      print(ontapindex);
-                    },
-                    child: buildCard(
-                        length: 4, index: index, ontapindex: ontapindex),
-                  );
-                },
-              ),
+          Container(
+            height: 85,
+            margin: const EdgeInsets.only(top: 600),
+            child: ListView.builder(
+              scrollDirection: Axis.horizontal,
+              itemExtent: 100.0,
+              shrinkWrap: true,
+              physics: BouncingScrollPhysics(),
+              itemCount: length,
+              itemBuilder: (BuildContext context, int index) {
+                return GestureDetector(
+                  onTap: () {
+                    setState(() {
+                      ontapindex = index;
+                      avengerlst.add(AVGLST[index]);
+                    });
+                    print(ontapindex);
+                  },
+                  child: buildCard(
+                      length: length, index: index, ontapindex: ontapindex),
+                );
+              },
             ),
           ),
           Positioned(
@@ -100,7 +107,7 @@ class _MarvelRenderState extends State<MarvelRender> {
                   },
                   icon: const FaIcon(
                     FontAwesomeIcons.plusCircle,
-                    color: Color(0xffD9C3FF),
+                    color: Color(0xff645087),
                     size: 30,
                   ),
                 ),
@@ -121,13 +128,68 @@ class _MarvelRenderState extends State<MarvelRender> {
                   },
                   icon: const FaIcon(
                     FontAwesomeIcons.minusCircle,
-                    color: Color(0xffD9C3FF),
+                    color: Color(0xff645087),
                     size: 30,
                   ),
                 ),
               ],
             ),
           ),
+          avengerlst.isEmpty == true
+              ? Container()
+              : Container(
+                  margin: const EdgeInsets.only(top: 100),
+                  child: DraggableScrollableSheet(
+                    initialChildSize: 0.1,
+                    maxChildSize: 0.5,
+                    minChildSize: 0.1,
+                    builder: (context, controller) => ClipRRect(
+                      borderRadius: const BorderRadius.only(
+                          topLeft: Radius.circular(24),
+                          topRight: Radius.circular(24)),
+                      child: Container(
+                        color: Color(0xff31293F),
+                        child: ListView.builder(
+                            //reverse: true,
+                            itemCount: avengerlst.length,
+                            controller: controller,
+                            itemBuilder: (context, index) {
+                              return Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Card(
+                                  elevation: 15,
+                                  color: Color(0xff7153A6),
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(18.0),
+                                    child: ListTile(
+                                      title: Text(
+                                        "Char Name: ${avengerlst[index].charName}\n"
+                                        "Real Name: ${avengerlst[index].realName}\n"
+                                        "Team: ${avengerlst[index].Avenger}\n"
+                                        "Planet: ${avengerlst[index].planet}\n"
+                                        "Rating: ${avengerlst[index].rating}\n"
+                                        "Special Ability: ${avengerlst[index].power}",
+                                        style: GoogleFonts.russoOne(
+                                            fontSize: 15,
+                                            backgroundColor: Colors.black38,
+                                            color: Colors.amber.shade300),
+                                      ),
+                                      subtitle: Text(
+                                        "🖇🗂 More info: ${avengerlst[index].description}",
+                                        style: GoogleFonts.poppins(
+                                            fontSize: 11,
+                                            backgroundColor: Colors.black12,
+                                            fontWeight: FontWeight.w600),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              );
+                            }),
+                      ),
+                    ),
+                  ),
+                ),
         ],
       ),
     );
