@@ -47,4 +47,12 @@ List<HomepageData> HomeDatalst = [
       height: 270,
       margintop: 1.0,
       marginright: 100.0),
+  HomepageData(
+      name: "FaceView",
+      image: "assets/marvel2.png",
+      path: Marvel.routename,
+      width: 270,
+      height: 270,
+      margintop: 1.0,
+      marginright: 100.0),
 ];
