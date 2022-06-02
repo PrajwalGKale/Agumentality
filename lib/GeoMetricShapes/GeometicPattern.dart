@@ -13,6 +13,7 @@ class GeometricPattern extends StatefulWidget {
   late int pattern;
   double dragsize;
   double dragRadius;
+
   GeometricPattern(
       {required this.pattern,
       required this.Shape,
