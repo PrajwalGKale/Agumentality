@@ -1,3 +1,5 @@
+import 'package:agumentality/Faceview/ARcoreFaceview.dart';
+import 'package:agumentality/Faceview/Home.dart';
 import 'package:agumentality/FurnitureMod/FurnitureModule.dart';
 import 'package:agumentality/GeoMetricShapes/GeometricShapes.dart';
 import 'package:agumentality/Marvel/Marvel.dart';
@@ -49,10 +51,10 @@ List<HomepageData> HomeDatalst = [
       marginright: 100.0),
   HomepageData(
       name: "FaceView",
-      image: "assets/marvel2.png",
-      path: Marvel.routename,
-      width: 270,
-      height: 270,
-      margintop: 1.0,
+      image: "assets/faceview.png",
+      path: Home.routename,
+      width: 200,
+      height: 200,
+      margintop: 5.0,
       marginright: 100.0),
 ];

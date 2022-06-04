@@ -1,5 +1,6 @@
 import 'package:agumentality/Experiment.dart';
 import 'package:agumentality/Faceview/ARcoreFaceview.dart';
+import 'package:agumentality/Faceview/Home.dart';
 import 'package:agumentality/FurnitureMod/FurnitureModule.dart';
 import 'package:agumentality/GeoMetricShapes/GeometricShapes.dart';
 import 'package:agumentality/HomePage.dart';
@@ -29,6 +30,8 @@ class MyApp extends StatelessWidget {
         FurnitureMod.routename: (ctx) => FurnitureMod(),
         Experiment.routename: (ctx) => Experiment(),
         OnTap.routename: (ctx) => OnTap(),
+        Home.routename: (ctx) => Home(),
+        //ARcoreFaceview.routename: (ctx) => ARcoreFaceview()
         //BottomSheetGEO.routename: (ctx) => BottomSheetGEO(),
       },
     );

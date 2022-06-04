@@ -34,6 +34,13 @@ class _OnBoardingState extends State<OnBoarding> {
         titleColor: Colors.black,
         descripColor: const Color(0xFF929794),
         imagePath: HomeDatalst[2].image),
+    SkOnboardingModel(
+        title: 'FaceView',
+        description:
+            'In this modules,Use of ARCore Faceview change different filter at runtime dynamically.',
+        titleColor: Colors.black,
+        descripColor: const Color(0xFF929794),
+        imagePath: HomeDatalst[3].image),
   ];
   @override
   Widget build(BuildContext context) {

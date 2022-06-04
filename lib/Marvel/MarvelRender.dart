@@ -18,7 +18,7 @@ class _MarvelRenderState extends State<MarvelRender> {
   var ontapindex = 0;
   var posheight = 700;
   var poswidth = 700;
-  int length = 13;
+  int length = 15;
   var characterPos;
   Future addMarvelCharacter(ArCoreHitTestResult hit) async {
     final bytes = (await rootBundle.load("assets/Marvel/AVG${ontapindex}.png"))
@@ -97,9 +97,9 @@ class _MarvelRenderState extends State<MarvelRender> {
                   onPressed: () {
                     print("plus");
                     setState(() {
-                      arCoreController.removeNode(nodeName: characterPos);
-                      posheight = posheight + 100;
-                      poswidth = poswidth + 80;
+                      //arCoreController.removeNode(nodeName: characterPos);
+                      posheight = posheight + 200;
+                      poswidth = poswidth + 100;
                     });
                     print("----------\n-------");
                     print(poswidth);
@@ -109,7 +109,7 @@ class _MarvelRenderState extends State<MarvelRender> {
                   icon: const FaIcon(
                     FontAwesomeIcons.plusCircle,
                     color: Color(0xff645087),
-                    size: 30,
+                    size: 40,
                   ),
                 ),
                 const SizedBox(
@@ -130,7 +130,7 @@ class _MarvelRenderState extends State<MarvelRender> {
                   icon: const FaIcon(
                     FontAwesomeIcons.minusCircle,
                     color: Color(0xff645087),
-                    size: 30,
+                    size: 40,
                   ),
                 ),
               ],

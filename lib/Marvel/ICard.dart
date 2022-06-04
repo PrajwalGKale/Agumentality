@@ -4,7 +4,7 @@ Row buildCard(
     {required int length, required int index, required int ontapindex}) {
   return Row(
     children: [
-      SizedBox(
+      const SizedBox(
         width: 10,
       ),
       Expanded(
@@ -15,7 +15,8 @@ Row buildCard(
           child: ontapindex == index
               ? Container(
                   decoration: BoxDecoration(
-                    border: Border.all(color: Color(0xff7504CD), width: 3),
+                    border:
+                        Border.all(color: const Color(0xff7504CD), width: 3),
                     borderRadius: BorderRadius.circular(60.0),
                   ),
                   child: Container(
