@@ -1,4 +1,5 @@
 import 'package:agumentality/Faceview/ARcoreFaceview.dart';
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -27,7 +28,7 @@ class _HomeState extends State<Home> {
             backgroundColor: const Color(0xff645087),
             onPressed: () {
               setState(() {
-                index != 6 ? index++ : index = 1;
+                index != 8 ? index++ : index = 1;
                 print("_______\nclicked\n_____");
               });
               Navigator.push(
@@ -46,20 +47,21 @@ class _HomeState extends State<Home> {
           decoration: const BoxDecoration(
               color: Color(0xff645087),
               borderRadius: BorderRadius.all(Radius.circular(24))),
-          child: FittedBox(
-            child: Padding(
-              padding: const EdgeInsets.all(10.0),
-              child: index == 0
-                  ? Text(
-                      "Tap",
-                      style: GoogleFonts.poppins(
-                          fontSize: 50, color: Colors.white70),
-                    )
-                  : Text(
-                      "Filter Number\n            ${index}",
-                      style: GoogleFonts.poppins(
-                          fontSize: 50, color: Colors.white70),
-                    ),
+          child: CarouselSlider.builder(
+            options: CarouselOptions(
+                height: 400,
+                autoPlay: true,
+                //enableInfiniteScroll: false,
+                onPageChanged: (index, reason) {
+                  setState(() => activeindex = index);
+                },
+                pageSnapping: false,
+                autoPlayInterval: const Duration(seconds: 3),
+                enlargeCenterPage: true,
+                enlargeStrategy: CenterPageEnlargeStrategy.scale),
+            itemCount: 8,
+            itemBuilder: (context, index, rindex) => Card(
+              child: Image.asset(),
             ),
           ),
         ),

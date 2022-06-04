@@ -151,21 +151,16 @@ class FurnitureDetailPage extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.all(15.0),
                   child: Scrollbar(
-                    child: Expanded(
-                      child: Container(
-                        decoration: const BoxDecoration(
-                          color: Colors.black12,
-                          borderRadius: BorderRadius.all(
-                            Radius.circular(20),
-                          ),
-                        ),
-                        child: Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Text(
-                            funitureDatalst[index].description,
-                            style: GoogleFonts.nunito(
-                                fontSize: 14, color: Colors.white70),
-                          ),
+                    child: Card(
+                      color: Colors.black12,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(24))),
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Text(
+                          funitureDatalst[index].description,
+                          style: GoogleFonts.nunito(
+                              fontSize: 14, color: Colors.white70),
                         ),
                       ),
                     ),
