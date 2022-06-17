@@ -40,7 +40,7 @@ class _HomeState extends State<Home> {
               ),
             );
           },
-          itemCount: 8,
+          itemCount: 10,
           //fade: 100.0,
           pagination: SwiperPagination(),
           control: SwiperControl(),
