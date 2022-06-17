@@ -60,6 +60,13 @@ dependencies:
   sk_onboarding_screen: ^1.0.1
   flutter_xlider: ^3.4.0
   hover_effect: ^0.6.0
+  screenshot: ^1.2.3
+  image_gallery_saver: ^1.7.1
+  permission_handler: ^9.2.0
+  native_screenshot: ^1.0.0
+  file_picker: ^4.6.1
+  form_field_validator: ^1.1.0
+  fluttertoast: ^8.0.9
 
 
 dev_dependencies:
@@ -91,6 +98,7 @@ flutter:
      - assets/MarvelLogo/
      - assets/Marvel/
      - assets/Pattern/
+     - assets/Filters/
 
 
 

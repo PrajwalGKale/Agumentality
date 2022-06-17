@@ -1,9 +1,9 @@
-import 'package:agumentality/Marvel/MarvelRender.dart';
 import 'package:flutter/material.dart';
+import 'package:agumentality/Marvel/MarvelRender.dart';
 import 'package:hover_effect/hover_effect.dart';
 
 class Marvel extends StatefulWidget {
-  const Marvel({Key? key}) : super(key: key);
+  //const Marvel({Key? key}) : super(key: key);
   static const routename = '/MarvelDCEU';
   @override
   State<Marvel> createState() => _MarvelState();
@@ -13,6 +13,7 @@ class _MarvelState extends State<Marvel>
     with TickerProviderStateMixin, WidgetsBindingObserver {
   var hover1 = false;
   var hover2 = false;
+
   //Animation Var//
   List<Color> colorList = [
     const Color(0xff3022AC),
@@ -20,17 +21,21 @@ class _MarvelState extends State<Marvel>
     Colors.indigo,
     Color(0xffC5B2D7),
   ];
+
   List<Alignment> alignmentList = [
     Alignment.bottomLeft,
     Alignment.bottomRight,
     Alignment.topRight,
     Alignment.topLeft,
   ];
+
   int index = 0;
   Color bottomColor = const Color(0xff3022AC);
   Color topColor = const Color(0xff7504CD);
   Alignment begin = Alignment.bottomLeft;
   Alignment end = Alignment.topRight;
+
+  //Animation var//
   late AnimationController controller;
   late Animation animationcolor;
   //Animation Var//
@@ -45,10 +50,13 @@ class _MarvelState extends State<Marvel>
       ),
       vsync: this,
     );
+
     animationcolor =
         ColorTween(begin: const Color(0xff3022AC), end: const Color(0xff1D1150))
             .animate(controller);
+
     controller.forward();
+
     animationcolor.addStatusListener((status) {
       if (status == AnimationStatus.completed) {
         //controller.reverse(from: 1.0);
@@ -65,6 +73,7 @@ class _MarvelState extends State<Marvel>
   }
 
   //Animation Fun//
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(

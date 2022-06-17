@@ -124,10 +124,10 @@ class _GeometricShapesState extends State<GeometricShapes>
   }
 
   //MAIN FUNCTION//
-  void
-      //MAIN FUNCTION//
+
+  //MAIN FUNCTION//
 //Cam FUNCTION//
-      getImagefile(ImageSource source, BuildContext ctx) async {
+  void getImagefile(ImageSource source, BuildContext ctx) async {
     PickedFile? Image = await picker.getImage(source: source);
     if (Image == null) {
       return null;
@@ -213,7 +213,7 @@ class _GeometricShapesState extends State<GeometricShapes>
       context: context,
       builder: (context) {
         return AlertDialog(
-          backgroundColor: Color(0xFFD6C7F7),
+          backgroundColor: const Color(0xFFD6C7F7),
           shape: const RoundedRectangleBorder(
               borderRadius: BorderRadius.all(Radius.circular(32.0))),
           contentPadding: const EdgeInsets.only(top: 10.0),
@@ -227,7 +227,7 @@ class _GeometricShapesState extends State<GeometricShapes>
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   mainAxisSize: MainAxisSize.min,
-                  children: <Widget>[
+                  children: const <Widget>[
                     Text(
                       "Custom Color",
                       style: TextStyle(fontSize: 24.0),

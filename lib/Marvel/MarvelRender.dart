@@ -18,8 +18,9 @@ class _MarvelRenderState extends State<MarvelRender> {
   var ontapindex = 0;
   var posheight = 700;
   var poswidth = 700;
-  int length = 15;
+  int length = 15 - 2; //length avg list
   var characterPos;
+
   Future addMarvelCharacter(ArCoreHitTestResult hit) async {
     final bytes = (await rootBundle.load("assets/Marvel/AVG${ontapindex}.png"))
         .buffer
@@ -30,6 +31,7 @@ class _MarvelRenderState extends State<MarvelRender> {
       position: hit.pose.translation + vector.Vector3(0.0, 0.0, 0.0),
       rotation: hit.pose.rotation + vector.Vector4(0.0, 0.0, 0.0, 0.0),
     );
+
     arCoreController.addArCoreNodeWithAnchor(characterPos);
   }
 
@@ -37,8 +39,6 @@ class _MarvelRenderState extends State<MarvelRender> {
     final hit = hits.first;
     //adding the char
     addMarvelCharacter(hit);
-
-    //
   }
 
   void whenArCoreViewCreated(ArCoreController controller) {
@@ -55,7 +55,7 @@ class _MarvelRenderState extends State<MarvelRender> {
 
   @override
   Widget build(BuildContext context) {
-    print("------------->${avengerlst.length}");
+    //print("------------->${avengerlst.length}");
     return Scaffold(
       backgroundColor: Colors.white60,
       body: Stack(

@@ -121,6 +121,7 @@ class _GeoMetricCreatedState extends State<GeoMetricCreated> {
     // TODO: implement dispose
     super.dispose();
     _controller.dispose();
+    widget.SavedImage.delete();
   }
 
   @override
