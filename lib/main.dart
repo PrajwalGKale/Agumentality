@@ -7,6 +7,7 @@ import 'package:agumentality/HomePage.dart';
 import 'package:agumentality/Marvel/Marvel.dart';
 import 'package:agumentality/Marvel/MarvelRender.dart';
 import 'package:agumentality/OnBoarding.dart';
+import 'package:agumentality/SpecsKart/SpecsKart.dart';
 import 'package:agumentality/Utils/ComingSoon.dart';
 import 'package:flutter/material.dart';
 import 'Earth.dart';
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: OnBoarding(),
+      home: SpescKart(),
       routes: {
         GeometricShapes.routename: (ctx) => GeometricShapes(),
         Earth.routename: (ctx) => Earth(),

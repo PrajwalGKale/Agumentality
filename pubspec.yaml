@@ -99,7 +99,7 @@ flutter:
      - assets/Marvel/
      - assets/Pattern/
      - assets/Filters/
-
+     - assets/SKBanner/
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
