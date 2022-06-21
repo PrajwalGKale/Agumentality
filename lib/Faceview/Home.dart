@@ -23,36 +23,35 @@ class _HomeState extends State<Home> {
     return Scaffold(
       backgroundColor: Color(0xff7E66A7),
       body: Center(
-        child: Swiper(
-          layout: SwiperLayout.TINDER,
-          itemHeight: 300,
-          itemWidth: 300,
-          itemBuilder: (BuildContext context, int index) {
-            return Container(
-              height: 400,
-              width: 400,
-              decoration: BoxDecoration(
-                  color: Color(0xff6841AB),
-                  borderRadius: BorderRadius.circular(24)),
-              child: Image.asset(
-                "assets/Filters/Filter${index + 1}.png",
-                fit: BoxFit.cover,
-              ),
-            );
-          },
-          itemCount: 10,
-          //fade: 100.0,
-          pagination: SwiperPagination(),
-          control: SwiperControl(),
-          onTap: (index) {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                  builder: (context) => ARcoreFaceview(index: index + 1)),
-            );
-          },
-        ),
-      ),
+          child: Swiper(
+        layout: SwiperLayout.TINDER,
+        itemHeight: 300,
+        itemWidth: 300,
+        itemBuilder: (BuildContext context, int index) {
+          return Container(
+            height: 400,
+            width: 400,
+            decoration: BoxDecoration(
+                color: Color(0xff6841AB),
+                borderRadius: BorderRadius.circular(24)),
+            child: Image.asset(
+              "assets/Filters/Filter${index + 1}.png",
+              fit: BoxFit.cover,
+            ),
+          );
+        },
+        itemCount: 10,
+        //fade: 100.0,
+        pagination: SwiperPagination(),
+        control: SwiperControl(),
+        onTap: (index) {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (context) => ARcoreFaceview(index: index + 1)),
+          );
+        },
+      )),
     );
   }
 }

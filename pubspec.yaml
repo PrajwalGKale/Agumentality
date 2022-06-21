@@ -101,6 +101,7 @@ flutter:
      - assets/Filters/
      - assets/SKBanner/
      - assets/Glasses/
+     - assets/SPECS/
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

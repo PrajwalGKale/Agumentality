@@ -46,3 +46,11 @@ List<String> SpecName = [
   'Wayfarer',
   'Sunglasses'
 ];
+
+List<String> SPECS = [
+  'assets/SPECS/Spec1.jpg',
+  'assets/SPECS/Spec2.jpg',
+  'assets/SPECS/Spec3.jpg',
+  'assets/SPECS/Spec4.jpg',
+  'assets/SPECS/Spec5.jpg',
+];
