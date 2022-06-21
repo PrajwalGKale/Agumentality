@@ -15,7 +15,7 @@ class _SpescKartState extends State<SpescKart> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Color(0xff232D2A),
       appBar: AppBar(
         title: Text(
           'Spec\'s Kart',

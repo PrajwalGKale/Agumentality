@@ -22,7 +22,7 @@ List<String> items = [
 ];
 
 List<String> SKBanner = [
-  'assets/SKBanner/banner1.jpg',
+  'assets/SKBanner/Banner1.gif',
   'assets/SKBanner/banner2.gif',
   'assets/SKBanner/banner3.jpg',
   'assets/SKBanner/banner4.jpg',
