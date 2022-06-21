@@ -26,7 +26,7 @@ List<String> SKBanner = [
   'assets/SKBanner/banner2.gif',
   'assets/SKBanner/banner3.jpg',
   'assets/SKBanner/banner4.jpg',
-  'assets/SKBanner/banner5.jpg'
+  'assets/SKBanner/banner5.jpg',
 ];
 
 List<String> SpecIndex = [
@@ -34,7 +34,15 @@ List<String> SpecIndex = [
   'assets/Glasses/Cat eye.png',
   'assets/Glasses/Rectangle.png',
   'assets/Glasses/Round.png',
-  'assets/Glasses/Wayfarer.png'
+  'assets/Glasses/Wayfarer.png',
+  'assets/Glasses/sunglasses.png'
 ];
 
-List<String> SpecName = ['Aviator', 'Cat', 'Rectangle', 'Round', 'Wayfarer'];
+List<String> SpecName = [
+  'Aviator',
+  'Cat',
+  'Rectangle',
+  'Round',
+  'Wayfarer',
+  'Sunglasses'
+];

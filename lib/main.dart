@@ -12,6 +12,7 @@ import 'package:agumentality/Utils/ComingSoon.dart';
 import 'package:flutter/material.dart';
 import 'Earth.dart';
 import 'OnTap.dart';
+import 'SpecsKart/SpecsDetailPage.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SpescKart(),
+      home: SpecsDetailPage(),
       routes: {
         GeometricShapes.routename: (ctx) => GeometricShapes(),
         Earth.routename: (ctx) => Earth(),
