@@ -4,6 +4,7 @@ import 'package:agumentality/Faceview/Home.dart';
 import 'package:agumentality/FurnitureMod/FurnitureModule.dart';
 import 'package:agumentality/GeoMetricShapes/GeometricShapes.dart';
 import 'package:agumentality/HomePage.dart';
+import 'package:agumentality/MainCreaterPage/MEGAPAGE.dart';
 import 'package:agumentality/Marvel/Marvel.dart';
 import 'package:agumentality/Marvel/MarvelRender.dart';
 import 'package:agumentality/OnBoarding.dart';
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SpescKart(),
+      home: MEGACREATERPAGE(),
       routes: {
         GeometricShapes.routename: (ctx) => GeometricShapes(),
         Earth.routename: (ctx) => Earth(),

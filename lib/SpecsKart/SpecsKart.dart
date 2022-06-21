@@ -88,7 +88,6 @@ class _SpescKartState extends State<SpescKart> {
                     padding: const EdgeInsets.all(8.0),
                     child: Container(
                       decoration: BoxDecoration(
-                          color: Colors.redAccent,
                           borderRadius: BorderRadius.circular(30)),
                       //height: 10,
                       width: 800,

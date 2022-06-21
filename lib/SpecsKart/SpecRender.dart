@@ -14,8 +14,15 @@ class _SpecRenderState extends State<SpecRender> {
   late ArCoreFaceController arCoreFaceController;
 
   void loadMesh() async {
-    final ByteData texturebytes =
-        await rootBundle.load("assets/snap${widget.index}.png");
+    print('-----------|||\n');
+    print('-----------|||\n');
+    print('-----------|||\n');
+    print(widget.index);
+    print('-----------|||\n');
+    print('-----------|||\n');
+    print('-----------|||\n');
+    final ByteData texturebytes = await rootBundle
+        .load("assets/SpecKartFrame/SpecKart${widget.index}.png");
     arCoreFaceController.loadMesh(
         textureBytes: texturebytes.buffer.asUint8List(),
         skin3DModelFilename: "man_face.sfb");

@@ -24,7 +24,7 @@ class SpecsDetailEach extends StatelessWidget {
             decoration: const BoxDecoration(
               color: Color(0xff232D2A),
             ),
-            child: Image.asset(SPECS[index + 1]),
+            child: Image.asset(SPECS[index]),
           ),
           Container(
             margin: const EdgeInsets.only(top: 200),
@@ -69,6 +69,13 @@ class SpecsDetailEach extends StatelessWidget {
                     ),
                     ElevatedButton(
                       onPressed: () {
+                        print('-----------\n');
+                        print('-----------\n');
+                        print('-----------\n');
+                        print(index);
+                        print('-----------\n');
+                        print('-----------\n');
+                        print('-----------\n');
                         Navigator.push(
                           context,
                           MaterialPageRoute(
