@@ -1,8 +1,10 @@
 import 'package:agumentality/Class_package/GlassMorphism.dart';
 import 'package:agumentality/Class_package/HomePageData.dart';
+import 'package:agumentality/MainCreaterPage/MEGAPAGE.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
@@ -206,6 +208,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                         ],
                       ),
                       child: FittedBox(
+                        fit: BoxFit.contain,
                         child: AnimatedTextKit(
                           repeatForever: true,
                           animatedTexts: [
@@ -283,6 +286,28 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                 ],
               ),
             ),
+            Container(
+              margin: const EdgeInsets.only(top: 20, left: 10),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(30),
+                color: Colors.white70,
+              ),
+              child: IconButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => MEGACREATERPAGE(),
+                    ),
+                  );
+                },
+                icon: const FaIcon(
+                  FontAwesomeIcons.userAstronaut,
+                  size: 36,
+                  color: Color(0xffA687EA),
+                ),
+              ),
+            )
           ],
         ),
       ),

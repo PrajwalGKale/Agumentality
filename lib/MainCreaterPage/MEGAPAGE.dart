@@ -3,6 +3,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:expandable_text/expandable_text.dart';
 import 'package:hover_effect/hover_effect.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class MEGACREATERPAGE extends StatefulWidget {
   const MEGACREATERPAGE({Key? key}) : super(key: key);
@@ -15,6 +16,7 @@ class _MEGACREATERPAGEState extends State<MEGACREATERPAGE>
     with TickerProviderStateMixin, WidgetsBindingObserver {
   var hover1 = false;
   var hover2 = false;
+
   //Animation Var//
   List<Color> colorList = [
     const Color(0xff3022AC),
@@ -39,6 +41,9 @@ class _MEGACREATERPAGEState extends State<MEGACREATERPAGE>
   //Animation var//
   late AnimationController controller;
   late Animation animationcolor;
+  late Animation avatarcolor1;
+  late Animation avatarcolor2;
+
   //Animation Var//
 
   //Animation Fun//
@@ -56,7 +61,40 @@ class _MEGACREATERPAGEState extends State<MEGACREATERPAGE>
         ColorTween(begin: const Color(0xff3022AC), end: const Color(0xff1D1150))
             .animate(controller);
 
+    avatarcolor1 =
+        ColorTween(begin: Colors.deepPurple, end: Colors.indigoAccent[100])
+            .animate(controller);
+    avatarcolor2 =
+        ColorTween(begin: Colors.indigoAccent[100], end: Colors.deepPurple)
+            .animate(controller);
+
     controller.forward();
+
+    avatarcolor1.addStatusListener((status) {
+      if (status == AnimationStatus.completed) {
+        //controller.reverse(from: 1.0);
+        setState(() {
+          controller.reverse();
+        });
+      } else if (status == AnimationStatus.dismissed) {
+        setState(() {
+          controller.forward();
+        });
+      }
+    });
+
+    avatarcolor2.addStatusListener((status) {
+      if (status == AnimationStatus.completed) {
+        //controller.reverse(from: 1.0);
+        setState(() {
+          controller.reverse();
+        });
+      } else if (status == AnimationStatus.dismissed) {
+        setState(() {
+          controller.forward();
+        });
+      }
+    });
 
     animationcolor.addStatusListener((status) {
       if (status == AnimationStatus.completed) {
@@ -74,6 +112,7 @@ class _MEGACREATERPAGEState extends State<MEGACREATERPAGE>
   }
 
   //Animation Fun//
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -99,16 +138,14 @@ class _MEGACREATERPAGEState extends State<MEGACREATERPAGE>
           alignment: Alignment.center,
           children: [
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20),
-              child: Positioned(
-                child: Container(
-                  child: Image.asset("assets/TechBack2.gif"),
-                  margin: const EdgeInsets.only(bottom: 470),
-                ),
+              padding: const EdgeInsets.symmetric(horizontal: 21),
+              child: Container(
+                child: Image.asset("assets/TechBack.gif"),
+                margin: const EdgeInsets.only(bottom: 390),
               ),
             ),
             Container(
-              margin: const EdgeInsets.only(top: 90),
+              margin: const EdgeInsets.only(top: 180),
               height: 500,
               width: 600,
               child: Padding(
@@ -122,25 +159,37 @@ class _MEGACREATERPAGEState extends State<MEGACREATERPAGE>
                       crossAxisAlignment: CrossAxisAlignment.center,
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
+                        const SizedBox(
+                          height: 8,
+                        ),
                         Center(
                           child: ListTile(
-                            title: Text('HOLA\nPrajwal Kale',
+                            title: Text('HOLA 👋,\nPrajwal Kale',
                                 textAlign: TextAlign.center,
-                                style: GoogleFonts.pacifico()),
-                            trailing: const FaIcon(
-                              FontAwesomeIcons.volumeUp,
-                              color: Colors.deepPurpleAccent,
+                                style: GoogleFonts.pacifico(
+                                    fontSize: 23,
+                                    // fontWeight: FontWeight.w700,
+                                    color: Colors.blueGrey)),
+                            trailing: IconButton(
+                              icon: const FaIcon(
+                                FontAwesomeIcons.volumeUp,
+                                color: Colors.deepPurpleAccent,
+                              ),
+                              onPressed: () {},
                             ),
-                            subtitle: Text('Inventor/Developer',
+                            subtitle: Text('👨‍💻Inventor/Developer',
                                 textAlign: TextAlign.center,
-                                style: GoogleFonts.pacifico(letterSpacing: 2)),
+                                style: GoogleFonts.turretRoad(
+                                    fontSize: 16,
+                                    letterSpacing: 3,
+                                    fontWeight: FontWeight.bold)),
                           ),
                         ),
-                        Padding(
-                          padding: const EdgeInsets.symmetric(
-                              horizontal: 2.0, vertical: 0.0),
-                          child: const Divider(
-                            thickness: 1.0,
+                        const Padding(
+                          padding: EdgeInsets.symmetric(
+                              horizontal: 20.0, vertical: 0.0),
+                          child: Divider(
+                            thickness: 1.2,
                             color: Colors.deepPurple,
                           ),
                         ),
@@ -148,32 +197,49 @@ class _MEGACREATERPAGEState extends State<MEGACREATERPAGE>
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             SocialHandleBtn(
+                                url:
+                                    'https://www.linkedin.com/in/the-prajwal-kale/',
                                 IconData: FontAwesomeIcons.linkedin),
                             const SizedBox(
                               width: 12,
                             ),
-                            SocialHandleBtn(IconData: FontAwesomeIcons.github),
-                            const SizedBox(
-                              width: 12,
-                            ),
-                            SocialHandleBtn(IconData: FontAwesomeIcons.twitter),
+                            SocialHandleBtn(
+                                url: 'https://github.com/PrajwalGKale',
+                                IconData: FontAwesomeIcons.github),
                             const SizedBox(
                               width: 12,
                             ),
                             SocialHandleBtn(
+                                url:
+                                    'https://www.linkedin.com/in/the-prajwal-kale/',
+                                IconData: FontAwesomeIcons.twitter),
+                            const SizedBox(
+                              width: 12,
+                            ),
+                            SocialHandleBtn(
+                                url:
+                                    'https://www.linkedin.com/in/the-prajwal-kale/',
                                 IconData: FontAwesomeIcons.instagram),
                             const SizedBox(
                               width: 12,
                             ),
                           ],
                         ),
-                        const Divider(
-                          thickness: 1.0,
-                          color: Colors.deepPurple,
+                        const Padding(
+                          padding: EdgeInsets.symmetric(
+                              horizontal: 40.0, vertical: 0.0),
+                          child: Divider(
+                            thickness: 1.2,
+                            color: Colors.deepPurple,
+                          ),
                         ),
                         ListTile(
-                          title: Text('Interest : '),
-                          subtitle: Text('Flutter / ML Enthusiast'),
+                          title: Text(
+                            'Keen Interest : ',
+                            style: GoogleFonts.turretRoad(fontSize: 16),
+                          ),
+                          subtitle: Text('Flutter / ML Enthusiast',
+                              style: GoogleFonts.poppins(fontSize: 16)),
                         ),
                         Padding(
                           padding: const EdgeInsets.all(8.0),
@@ -194,7 +260,7 @@ class _MEGACREATERPAGEState extends State<MEGACREATERPAGE>
                       ],
                     ),
                   ),
-                  depth: 19,
+                  depth: 22,
                   depthColor: const Color(0xff8E6DC7),
                   onTap: () {
                     setState(() {
@@ -205,13 +271,13 @@ class _MEGACREATERPAGEState extends State<MEGACREATERPAGE>
               ),
             ),
             Positioned(
-              top: 50,
+              top: 100,
               child: Center(
                 child: CircleAvatar(
-                  backgroundColor: Colors.green,
+                  backgroundColor: avatarcolor1.value,
                   radius: 90,
                   child: CircleAvatar(
-                    backgroundColor: Colors.greenAccent[100],
+                    backgroundColor: avatarcolor2.value,
                     radius: 84,
                     child: const CircleAvatar(
                       backgroundImage:
@@ -228,13 +294,18 @@ class _MEGACREATERPAGEState extends State<MEGACREATERPAGE>
     );
   }
 
-  SocialHandleBtn({required IconData IconData}) => CircleAvatar(
-        radius: 25,
-        foregroundColor: Colors.deepPurpleAccent,
-        child: Center(
-          child: Icon(
-            IconData,
-            size: 32,
+  SocialHandleBtn({required IconData IconData, required String url}) => InkWell(
+        onTap: () async {
+          await launch(url);
+        },
+        child: CircleAvatar(
+          radius: 25,
+          foregroundColor: Colors.deepPurpleAccent,
+          child: Center(
+            child: Icon(
+              IconData,
+              size: 32,
+            ),
           ),
         ),
       );

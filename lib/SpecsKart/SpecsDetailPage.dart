@@ -46,6 +46,7 @@ class _SpecsDetailPageState extends State<SpecsDetailPage> {
         padding: const EdgeInsets.all(8.0),
         child: GridView.builder(
           shrinkWrap: true,
+          padding: const EdgeInsets.all(8.0),
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 2),
           itemCount: 5,

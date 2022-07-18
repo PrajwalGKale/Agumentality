@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: MEGACREATERPAGE(),
+      home: OnBoarding(),
       routes: {
         GeometricShapes.routename: (ctx) => GeometricShapes(),
         Earth.routename: (ctx) => Earth(),
@@ -34,6 +34,7 @@ class MyApp extends StatelessWidget {
         Experiment.routename: (ctx) => Experiment(),
         OnTap.routename: (ctx) => OnTap(),
         Home.routename: (ctx) => Home(),
+        SpescKart.routename: (ctx) => SpescKart(),
         //ARcoreFaceview.routename: (ctx) => ARcoreFaceview()
         //BottomSheetGEO.routename: (ctx) => BottomSheetGEO(),
       },

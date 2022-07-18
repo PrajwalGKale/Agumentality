@@ -6,6 +6,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 class SpescKart extends StatefulWidget {
   const SpescKart({Key? key}) : super(key: key);
+  static const routename = '/SpecKart';
 
   @override
   State<SpescKart> createState() => _SpescKartState();
@@ -34,6 +35,7 @@ class _SpescKartState extends State<SpescKart> {
         padding: const EdgeInsets.all(8.0),
         child: GridView.builder(
           shrinkWrap: true,
+          padding: const EdgeInsets.all(8.0),
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 2),
           itemCount: 6,

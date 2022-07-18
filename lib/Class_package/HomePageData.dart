@@ -4,6 +4,7 @@ import 'package:agumentality/FurnitureMod/FurnitureModule.dart';
 import 'package:agumentality/GeoMetricShapes/GeometricShapes.dart';
 import 'package:agumentality/Marvel/Marvel.dart';
 import 'package:agumentality/MarvelChar.dart';
+import 'package:agumentality/SpecsKart/SpecsKart.dart';
 import 'package:agumentality/Utils/ComingSoon.dart';
 
 class HomepageData {
@@ -53,6 +54,14 @@ List<HomepageData> HomeDatalst = [
       name: "FaceView",
       image: "assets/faceview.png",
       path: Home.routename,
+      width: 200,
+      height: 200,
+      margintop: 5.0,
+      marginright: 100.0),
+  HomepageData(
+      name: "Spec's Kart",
+      image: "assets/SpecsKartlogo.png",
+      path: SpescKart.routename,
       width: 200,
       height: 200,
       margintop: 5.0,

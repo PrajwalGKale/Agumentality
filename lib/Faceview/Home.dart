@@ -35,7 +35,7 @@ class _HomeState extends State<Home> {
                 color: Color(0xff6841AB),
                 borderRadius: BorderRadius.circular(24)),
             child: Image.asset(
-              "assets/Filters/Filter${index + 1}.png",
+              "assets/Filters/Filter${index}.png",
               fit: BoxFit.cover,
             ),
           );
