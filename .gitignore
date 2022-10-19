@@ -12,8 +12,8 @@
 #Hidden File
 
 #GEO
-GeometricShapes.dart
-GeoMetricCreatedImage.dart
+*.GeometricShapes.dart
+*.GeoMetricCreatedImage.dart
 
 #Furniture
 FurnitureRender.dart
