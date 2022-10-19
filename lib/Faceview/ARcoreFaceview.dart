@@ -12,7 +12,6 @@ import 'package:permission_handler/permission_handler.dart';
 import 'package:native_screenshot/native_screenshot.dart';
 import 'dart:convert';
 import 'package:share_plus/share_plus.dart';
-import 'package:form_field_validator/form_field_validator.dart';
 
 class ARcoreFaceview extends StatefulWidget {
   //const ARcoreFaceview({Key? key}) : super(key: key);

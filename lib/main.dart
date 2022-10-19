@@ -8,6 +8,7 @@ import 'package:agumentality/MainCreaterPage/MEGAPAGE.dart';
 import 'package:agumentality/Marvel/Marvel.dart';
 import 'package:agumentality/Marvel/MarvelRender.dart';
 import 'package:agumentality/OnBoarding.dart';
+import 'package:agumentality/Quiz/Quiz.dart';
 import 'package:agumentality/SpecsKart/SpecsKart.dart';
 import 'package:agumentality/Utils/ComingSoon.dart';
 import 'package:flutter/material.dart';
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: OnBoarding(),
+      home: Quiz(),
       routes: {
         GeometricShapes.routename: (ctx) => GeometricShapes(),
         Earth.routename: (ctx) => Earth(),

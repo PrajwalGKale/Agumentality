@@ -9,6 +9,32 @@
 .history
 .svn/
 
+#Hidden File
+
+#GEO
+GeometricShapes.dart
+GeoMetricCreatedImage.dart
+
+#Furniture
+FurnitureRender.dart
+FurnitureModule.dart
+
+#FaceView
+ARcoreFaceview.dart
+
+#Spec'sKart
+SpecsDetailPage.dart
+SpecsKart.dart
+
+#marvel
+MarvelRender.dart
+
+#mainPage
+ManinCreaterPage/
+
+Earth.dart
+#Hidden File
+
 # IntelliJ related
 *.iml
 *.ipr
