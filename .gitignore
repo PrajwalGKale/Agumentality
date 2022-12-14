@@ -2,14 +2,16 @@
 lib/.gitignore
 GeoMetricShapes.dart
 GeoMetricCreatedImage.dart
-lib/FurnitureMod/FurnitureRender.dart
-FurnitureMod/FurnitureModule.dart
-ARcoreFaceview.dart
-SpecsDetailPage.dart
-SpecsKart.dart
-MarvelRender.dart
-ManinCreaterPage/
-Earth.dart
+
+FurnitureRender.dart
+# FurnitureRender.dart
+# FurnitureModule.dart
+# ARcoreFaceview.dart
+# SpecsDetailPage.dart
+# SpecsKart.dart
+# MarvelRender.dart
+# ManinCreaterPage/
+# Earth.dart
 #Hidden File
 
 # Miscellaneous
