@@ -1,3 +1,17 @@
+#Hidden File
+lib/.gitignore
+GeoMetricShapes.dart
+GeoMetricCreatedImage.dart
+lib/FurnitureMod/FurnitureRender.dart
+FurnitureMod/FurnitureModule.dart
+ARcoreFaceview.dart
+SpecsDetailPage.dart
+SpecsKart.dart
+MarvelRender.dart
+ManinCreaterPage/
+Earth.dart
+#Hidden File
+
 # Miscellaneous
 *.class
 *.log
@@ -9,18 +23,7 @@
 .history
 .svn/
 
-#Hidden File
-GeoMetricShapes.dart
-GeoMetricCreatedImage.dart
-FurnitureRender.dart
-FurnitureModule.dart
-ARcoreFaceview.dart
-SpecsDetailPage.dart
-SpecsKart.dart
-MarvelRender.dart
-ManinCreaterPage/
-Earth.dart
-#Hidden File
+
 
 # IntelliJ related
 *.iml
