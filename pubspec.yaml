@@ -34,8 +34,8 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
-  arcore_flutter_plugin: ^0.0.11
-  arkit_plugin: ^1.0.5
+  arcore_flutter_plugin: ^0.1.0-null-safety.3
+  #arkit_plugin: ^1.0.5
   sliding_sheet: ^0.5.2
   card_swiper: ^2.0.1
   carousel_slider: ^4.0.0
@@ -57,8 +57,8 @@ dependencies:
   share_plus: ^4.0.4
   flutter_mailer: any
   url_launcher: ^6.0.20
-  sk_onboarding_screen: ^1.0.1
-  flutter_xlider: ^3.4.0
+  sk_onboarding_screen: any
+  flutter_xlider: any
   hover_effect: ^0.6.0
   screenshot: ^1.2.3
   image_gallery_saver: ^1.7.1

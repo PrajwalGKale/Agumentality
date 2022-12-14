@@ -10,28 +10,15 @@
 .svn/
 
 #Hidden File
-
-#GEO
-GeoMetricShapes/*GeometricShapes.dart
+GeoMetricShapes.dart
 GeoMetricCreatedImage.dart
-
-#Furniture
 FurnitureRender.dart
 FurnitureModule.dart
-
-#FaceView
 ARcoreFaceview.dart
-
-#Spec'sKart
 SpecsDetailPage.dart
 SpecsKart.dart
-
-#marvel
 MarvelRender.dart
-
-#mainPage
-.ManinCreaterPage/
-
+ManinCreaterPage/
 Earth.dart
 #Hidden File
 
