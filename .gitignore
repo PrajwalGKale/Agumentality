@@ -2,8 +2,7 @@
 lib/.gitignore
 GeoMetricShapes.dart
 GeoMetricCreatedImage.dart
-
-FurnitureRender.dart
+FurnitureMod\FurnitureRender.dart
 # FurnitureRender.dart
 # FurnitureModule.dart
 # ARcoreFaceview.dart
